@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "commonjs",
+    "allowJs": false,                       /* Allow javascript files to be compiled. */
+    "jsx": "react",
+    "sourceMap": true,                     /* Generates corresponding '.map' file. */
+    "strict": true,                           /* Enable all strict type-checking options. */
+    "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
+    // "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
