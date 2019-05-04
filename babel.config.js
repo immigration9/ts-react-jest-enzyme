@@ -1,5 +1,5 @@
 module.exports = function (api) {
-  api.cache(true);
+  const isProduction = api.env("production");
 
   const presets = [
     [
@@ -12,10 +12,12 @@ module.exports = function (api) {
     ["@babel/preset-react"],
     ["@babel/preset-typescript"]
   ]
-  const plugins = [];
+  const plugins = [
+    ["@babel/plugin-transform-modules-commonjs"]
+  ];
 
   return {
     presets,
-    plugins
+    plugins : isProduction ? [] : plugins
   };
 }
