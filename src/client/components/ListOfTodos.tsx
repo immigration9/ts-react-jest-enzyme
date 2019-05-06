@@ -8,9 +8,11 @@ interface Props {
 const ListOfTodos: FunctionComponent<Props> = ({ todoList }) => {
   return (
     <div>
-      { todoList && todoList.map((todo) => {
-        return <TodoComponent todo={todo} />
-      })}
+      { todoList && todoList.length > 0
+      ? todoList.map((todo) => {
+          return <TodoComponent todo={todo} />
+        })
+      : "Nothing to do"}
     </div>
   )
 }
